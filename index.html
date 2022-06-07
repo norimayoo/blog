@@ -3,7 +3,7 @@
 <head>
   <head>
     <meta charset="utf-8">
-    <title>Sneakers</title>
+    <title>My Site</title>
     <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキス">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/favicon.ico">
@@ -14,14 +14,13 @@
 </head>
 <body>
   <!-- ヘッダー -->
-  <header>
-    <h1><img src="img/logo.jpg" alt="ロゴ"></h1>
+  <header id="header">
+    <h1 class="site-title"><img src="img/logo.jpg" alt="ロゴ"></h1>
     <nav>
       <ul>
-        <li id="about">About</li>
-        <li id="profile">Profile</li>
-        <li id="Activity">Activity</li>
-        <li id="contact">Contact</li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#activity">Activity</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -34,7 +33,7 @@
     </div>
     <!-- プロフィール -->
     <section id="profile">
-      <h2>Profile</h2>
+      <h2 class="sec-title">Profile</h2>
       <img src="img/profile.png" alt="プロフィール写真">
       <div id="profile_div">
         <p id="profile_name">FirstName LastName</p>
@@ -43,7 +42,7 @@
     </section>
     <!-- アクティビティ -->
     <section id="activity">
-      <h2>Activity</h2>
+      <h2 class="sec-title">Activity</h2>
       <div>
         <div class="item">
           <img src="img/item1.png" alt="イメージ" class="item_img">
@@ -79,18 +78,23 @@
     </section>
     <!-- コンタクト -->
     <section id="contact">
-      <h2>Contact</h2>
+      <h2 class="sec-title">Contact</h2>
       <div class="contact-adress">
-        <p>Ibaraki</p>
+        <p>Tochigi Nasukarasuyama</p>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102410.85068561402!2d140.0658153808846!3d36.666347444489354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6021ddaf5c8b1de5%3A0x3811ebe5c1a210d7!2z5qCD5pyo55yM6YKj6aCI54OP5bGx5biC!5e0!3m2!1sja!2sjp!4v1652601643873!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
       <div class="contact-info">
-        <form action="">
-
+        <form action="#">
+          <dl>
+            <dt><label for="name">Name</label></dt>
+            <dd><input type="text" id="name" name="your-name"></dd>
+            <dt><label for="comment">Comment</label></dt>
+            <dd><input type="text" id="comment" name="your-message"></dd>
+          </dl>
+          <div class="button"><input type="submit" value="SEND"></div>
         </form>
       </div>
-
     </section>
   </main>
 
